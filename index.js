@@ -4,8 +4,8 @@ const engine = Engine.create();
 engine.world.gravity.y = 0;
 const { world } = engine;
 
-const cellsHorizontal = 3;
-const cellsVertical = 3;
+const cellsHorizontal = 15;
+const cellsVertical = 15;
 const width = window.innerWidth - 10;
 const height = window.innerHeight - 10;
 
@@ -173,7 +173,7 @@ const goal = Bodies.rectangle(
 );
 World.add(world, goal);
 
-const ballRadius = Math.min((unitLengthX + unitLengthY) / 6);
+const ballRadius = Math.min((unitLengthX + unitLengthY) / 9);
 
 const ball = Bodies.circle(unitLengthX / 2, unitLengthY / 2, ballRadius, { label: 'ball' });
 World.add(world, ball);
