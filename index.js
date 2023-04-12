@@ -1,7 +1,7 @@
 const { Engine, Render, Runner, World, Bodies, Body, Events } = Matter;
 
-const cellsHorizontal = 14;
-const cellsVertical = 14;
+const cellsHorizontal = 15;
+const cellsVertical = 15;
 const width = window.innerWidth;
 const height = window.innerHeight;
 
@@ -126,7 +126,7 @@ horizontals.forEach((row, rowIndex) => {
             columnIndex * unitLengthX + unitLengthX / 2,
             rowIndex * unitLengthY + unitLengthY,
             unitLengthX,
-            5,
+            3,
             {
                 label: 'wall',
                 isStatic: true,
@@ -148,7 +148,7 @@ verticals.forEach((row, rowIndex) => {
         const wall = Bodies.rectangle(
             columnIndex * unitLengthX + unitLengthX,
             rowIndex * unitLengthY + unitLengthY / 2,
-            5,
+            3,
             unitLengthY,
             {
                 label: 'wall',
